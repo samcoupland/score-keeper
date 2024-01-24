@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="score counter" />
+        <meta name="keywords" content="score counter ping pong" />
+        <meta name="author" content="Samuel Coupland" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="favion.ico" />
+        <title>Count Your Score</title>
+    </head>
+
+    <body>
+        <main>
+            <table class="center">
+                <tr>
+                    <th colspan="3" class="picture">
+                        <img
+                            class="topImg"
+                            src="table-tennis.jpeg"
+                            alt="table tennis"
+                        />
+                    </th>
+                </tr>
+                
+                <tr>
+                    <td colspan="3" class="title borderShadow">
+                        Ping Pong Score Keeper
+                    </td>
+                </tr>
+
+                <tr class="gameStats borderShadow">
+                    <td colspan="3">
+                        <div class="score"><span class="scoreOne">0</span> to <span class="scoreTwo">0</span></div>
+                        <div class="info">
+                            Use the buttons below to keep score
+                        </div>
+                        <div class="matchLength">
+                            <label for="winValues">Playing To </label>
+                            <select name="winValues" id="winValues">
+                                <option class="five" value="5">5</option>
+                                <option class="nine" value="9">9</option>
+                                <option class="eleven" value="11">11</option>
+                                <option class="thirteen" value="13">13</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="buttonList">
+                    <td class="tableButtons playerOne">+1 Player One</td>
+                    <td class="tableButtons playerTwo">+1 Player Two</td>
+                    <td class="tableButtons reset">Reset</td>
+                </tr>
+            </table>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
