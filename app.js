@@ -58,6 +58,7 @@ function buttonClicked(e) {
             if (scoreOne.innerText === winCondition.value) {
                 scoreOne.style.color = "green";
                 scoreTwo.style.color = "red";
+                info.innerText = "Player One has won";
                 end = true;
             }
         } else if (e.target.className === "tableButtons playerTwo") {
@@ -67,6 +68,7 @@ function buttonClicked(e) {
             if (scoreTwo.innerText === winCondition.value) {
                 scoreOne.style.color = "red";
                 scoreTwo.style.color = "green";
+                info.innerText = "Player Two has won";
                 end = true;
             }
         }
