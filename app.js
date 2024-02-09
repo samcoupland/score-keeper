@@ -29,10 +29,16 @@ for (button of tableButtons) {
 function whoIsWining(playerOne, playerTwo) {
     let one = parseInt(playerOne.innerText) + 1;
     let two = parseInt(playerTwo.innerText) + 1;
-    if (one > two) {
-        info.innerText = "Player One Is winning";
+    if (one-1 == winCondition.value) {
+      info.innerText = "Player One has won";
+    } else if (two-1 == winCondition.value) {
+      info.innerText = "Player Two has won";
     } else {
-        info.innerText = "Player Two Is winning";
+      if (one > two) {
+          info.innerText = "Player One Is winning";
+      } else {
+          info.innerText = "Player Two Is winning";
+      }
     }
 }
 
@@ -58,7 +64,6 @@ function buttonClicked(e) {
             if (scoreOne.innerText === winCondition.value) {
                 scoreOne.style.color = "green";
                 scoreTwo.style.color = "red";
-                info.innerText = "Player One has won";
                 end = true;
             }
         } else if (e.target.className === "tableButtons playerTwo") {
@@ -68,7 +73,6 @@ function buttonClicked(e) {
             if (scoreTwo.innerText === winCondition.value) {
                 scoreOne.style.color = "red";
                 scoreTwo.style.color = "green";
-                info.innerText = "Player Two has won";
                 end = true;
             }
         }
